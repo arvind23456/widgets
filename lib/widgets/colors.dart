@@ -1,42 +1,3 @@
-/*  import 'package:flutter/material.dart';
-import 'dart:math';
-
-void main() {
-  runApp(
-    MaterialApp(
-      home: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatefulWidget {
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-
-  List colors = [Colors.red, Colors.green, Colors.yellow];
-  Random random = new Random();
-
-  int index = 0;
-
-  void changeIndex() {
-    setState(() => index = random.nextInt(3));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: RaisedButton(
-        onPressed: () => changeIndex(),
-        child: Text('Click'),
-        color: colors[index],
-      ),
-    );
-  }
-}
-  */
-
 import 'dart:math';
 import 'package:flutter/material.dart';
 
@@ -67,6 +28,7 @@ class DifferentColoredLetters extends StatelessWidget {
     return Wrap(
         spacing: 10,
         runSpacing: 30,
+        //  alignment: WrapAlignment.center,
         runAlignment: WrapAlignment.spaceAround,
         direction: Axis.vertical,
         children: [
@@ -74,15 +36,70 @@ class DifferentColoredLetters extends StatelessWidget {
             Text(
               text[i],
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 color: Color.fromARGB(
                   255,
-                  Random().nextInt(240),
-                  Random().nextInt(256),
-                  Random().nextInt(240),
+                  Random().nextInt(250),
+                  Random().nextInt(250),
+                  Random().nextInt(250),
                 ),
               ),
             ),
         ]);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatefulWidget {
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  List colors = [Colors.red, Colors.green, Colors.yellow];
+  Random random = new Random();
+
+  int index = 0;
+
+  void changeIndex() {
+    setState(() => index = random.nextInt(3));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return 
+  }
+}
+  */

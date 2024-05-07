@@ -34,6 +34,8 @@
 //   }
 // }
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -65,7 +67,7 @@ class ClipRRect1Example extends StatelessWidget {
       child: Column(
         textDirection: TextDirection.ltr,
         mainAxisSize: MainAxisSize.max,
-        verticalDirection: VerticalDirection.up,
+        verticalDirection: VerticalDirection.down,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ClipRRect(
@@ -76,6 +78,9 @@ class ClipRRect1Example extends StatelessWidget {
                 maxWidth: 300,
                 maxHeight: 100,
               ),
+
+              transform: Matrix4.rotationZ(0.2),
+              //transformAlignment: Alignment.centerLeft,
               color: Colors.blue,
               child: const Text('icon button', style: style),
             ),
@@ -97,6 +102,22 @@ class ClipRRect1Example extends StatelessWidget {
               child: const Text('Wiukolo', style: style),
             ),
           ),
+          // ClipRRect(
+          //   borderRadius: const BorderRadius.horizontal(
+          //       left: Radius.elliptical(12, 25),
+          //       right: Radius.elliptical(40, 70)),
+          // child:
+          Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              // transform: Matrix4.skewY(50),
+              transform: Matrix4.rotationZ(0.5),
+              transformAlignment: Alignment.topCenter,
+              constraints: const BoxConstraints(maxWidth: 250, minHeight: 100),
+              child: const Text(
+                'constraints',
+                style: style,
+              )),
         ],
       ),
     );
